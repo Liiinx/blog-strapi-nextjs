@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "Comments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "comment_date": {
+      "type": "date"
+    },
+    "article": {
+      "model": "article",
+      "via": "comments"
+    },
+    "writer": {
+      "model": "writer"
+    }
+  }
+}
